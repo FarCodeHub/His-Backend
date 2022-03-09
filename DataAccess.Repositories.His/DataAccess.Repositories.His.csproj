@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="IBloodGroupRepository.cs" />
+    <Compile Remove="ICityRepository.cs" />
+    <Compile Remove="ICountryRepository.cs" />
+    <Compile Remove="IEducationRepository.cs" />
+    <Compile Remove="IJobRepository.cs" />
+    <Compile Remove="IProvinceRepository.cs" />
+    <Compile Remove="ISexRepository.cs" />
+    <Compile Remove="IWorkTimeTypeRepository.cs" />
+    <Compile Remove="IZoneRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess.Entities.His\DataAccess.Entities.His.csproj" />
+  </ItemGroup>
+
+</Project>

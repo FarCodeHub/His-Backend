@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>c130ef49-1bdd-444b-88a8-bd87c34cd9b8</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.WebHost" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.1.17" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.13.0-readme-preview" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Business.CenterManagment\Business.CenterManagment.csproj" />
+    <ProjectReference Include="..\Business.Common\Business.Common.csproj" />
+    <ProjectReference Include="..\Business.DoctorManagment\Business.AppointmentManagment.csproj" />
+    <ProjectReference Include="..\Business.SMSManagment\Business.SMSManagment.csproj" />
+    <ProjectReference Include="..\Business.SyncManagment\Business.SyncManagment.csproj" />
+    <ProjectReference Include="..\ConvertDB\ConvertDB.csproj" />
+    <ProjectReference Include="..\Core.His\Core.His.csproj" />
+    <ProjectReference Include="..\DataAccess.Entities.His\DataAccess.Entities.His.csproj" />
+    <ProjectReference Include="..\DataAccess.Repositories.EF.His\DataAccess.Repositories.EF.His.csproj" />
+    <ProjectReference Include="..\DataAccess.Repositories.His\DataAccess.Repositories.His.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\Avatars\" />
+    <Folder Include="wwwroot\Images\UploadedFile\" />
+  </ItemGroup>
+
+</Project>
