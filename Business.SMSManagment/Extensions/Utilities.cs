@@ -32,7 +32,7 @@ namespace Business.SMSManagment.Extensions
 
         public static string AppendText(string a, string b, string ch)
         {
-            if (!string.IsNullOrEmpty(a) && !string.IsNullOrEmpty(a))
+            if (!string.IsNullOrEmpty(a) && !string.IsNullOrEmpty(b))
             {
                 return $"{a} - {b}";
             }
@@ -367,7 +367,7 @@ namespace Business.SMSManagment.Extensions
         public static string GenerateRandomNumber(int to)
         {
             const string Letters = "123456789";
-          //  Random rand = new Random();
+    
 
 
             var rand = RandomNumberGenerator.Create(); // Compliant for security-sensitive use cases
@@ -376,7 +376,7 @@ namespace Business.SMSManagment.Extensions
               
 
 
-            int maxRand = Letters.Length - 1;
+   
 
             StringBuilder sb = new StringBuilder();
 
