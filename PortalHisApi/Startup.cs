@@ -33,15 +33,15 @@ namespace PortalHisApi
             var connectionString = Configuration.GetConnectionString("PortalHis");
             ServiceRegistry.RegisterServices(services, connectionString, Configuration);
 
-            services.AddCors(o => o.AddPolicy(MyAllowSpecificOrigins, builder =>
-            {
-                builder.AllowAnyOrigin()
-                       .AllowAnyMethod()
-                       .AllowAnyHeader()
-                       .WithHeaders("x-custom-header");
-                ;
+            //services.AddCors(o => o.AddPolicy(MyAllowSpecificOrigins, builder =>
+            //{
+            //    builder.AllowAnyOrigin()
+            //           .AllowAnyMethod()
+            //           .AllowAnyHeader()
+            //           .WithHeaders("x-custom-header");
+            //    ;
                        
-            }));
+            //}));
 
             services.AddAuthorization();
 

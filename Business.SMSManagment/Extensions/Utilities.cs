@@ -367,14 +367,22 @@ namespace Business.SMSManagment.Extensions
         public static string GenerateRandomNumber(int to)
         {
             const string Letters = "123456789";
-            Random rand = new Random();
+          //  Random rand = new Random();
+
+
+            var rand = RandomNumberGenerator.Create(); // Compliant for security-sensitive use cases
+            byte[] data = new byte[16];
+            rand.GetBytes(data);
+              
+
+
             int maxRand = Letters.Length - 1;
 
             StringBuilder sb = new StringBuilder();
 
             for (int i = 0; i < to; i++)
             {
-                int index = rand.Next(maxRand);
+                int index = BitConverter.ToInt32(data);  
                 sb.Append(Letters[index]);
             }
 
